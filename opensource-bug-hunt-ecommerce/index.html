@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Market</title>
+    <meta
+      name="description"
+      content="Northstar Market is a modern ecommerce storefront for everyday essentials, tech, and lifestyle goods."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand" aria-label="Northstar Market home">
+          <div class="brand-mark">N</div>
+          <span>Northstar</span>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#products">Shop</a>
+          <a href="#deals">Deals</a>
+          <a href="#features">Why us</a>
+        </nav>
+
+        <div class="nav-actions">
+          <label class="search" aria-label="Search products">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.5 3a7.5 7.5 0 015.88 12.8l4.42 4.42 1.41-1.41-4.42-4.42A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/>
+            </svg>
+            <input id="searchInput" type="search" placeholder="Search products" />
+          </label>
+
+          <button class="cart-button" id="cartToggle" aria-label="Open shopping cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2l2.2 9.5a1 1 0 00.98.8h8.7a1 1 0 00.98-.8L19.2 7H7.2l-.5-2.2A1 1 0 005.7 4H3zm5 15.5A1.5 1.5 0 109 21a1.5 1.5 0 000-3zm8 0A1.5 1.5 0 1017 21a1.5 1.5 0 000-3z"/>
+            </svg>
+            Cart
+            <span id="cartCount" class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Fresh finds for everyday life</p>
+          <h1>Smart essentials for the way you live.</h1>
+          <p class="subcopy">
+            Discover premium home, tech, and lifestyle picks designed to elevate your daily routine.
+          </p>
+
+          <div class="cta-row">
+            <a href="#products" class="button primary">Shop collection</a>
+            <a href="#deals" class="button secondary">View deals</a>
+          </div>
+
+          <ul class="hero-points">
+            <li>Free shipping over $50</li>
+            <li>Easy 30-day returns</li>
+            <li>New arrivals weekly</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Featured products preview">
+          <div class="feature-card large">
+            <div class="card-badge">Bestseller</div>
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+              alt="Smart watch product"
+            />
+            <div class="feature-card-details">
+              <div>
+                <h3>Aero Watch Pro</h3>
+                <p>Health + style</p>
+              </div>
+              <strong>$189</strong>
+            </div>
+          </div>
+
+          <div class="mini-stack">
+            <div class="feature-card small">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+                alt="Running shoes product"
+              />
+              <div>
+                <p>Performance</p>
+                <strong>$120</strong>
+              </div>
+            </div>
+
+            <div class="feature-card small accent">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+                alt="Headphones product"
+              />
+              <div>
+                <p>Audio</p>
+                <strong>$99</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories container" aria-label="Shop categories">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="tech">Tech</button>
+        <button class="chip" data-filter="fashion">Fashion</button>
+        <button class="chip" data-filter="home">Home</button>
+        <button class="chip" data-filter="wellness">Wellness</button>
+      </section>
+
+      <section id="products" class="products container" aria-live="polite">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Curated picks</p>
+            <h2>Popular products</h2>
+          </div>
+          <a href="#" class="text-link">Browse all</a>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+
+      <section id="deals" class="deal-banner container">
+        <div class="deal-copy">
+          <p class="eyebrow">This week only</p>
+          <h2>Save up to 40% on premium essentials.</h2>
+        </div>
+        <a href="#products" class="button primary">Claim the deal</a>
+      </section>
+
+      <section id="features" class="benefits container">
+        <div class="benefit-item">
+          <div class="benefit-icon">⚡</div>
+          <h3>Fast shipping</h3>
+          <p>Quick delivery on all orders placed before 2 PM.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Safe checkout</h3>
+          <p>Protected payments with secure processing and support.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">♻️</div>
+          <h3>Eco-minded</h3>
+          <p>Thoughtfully sourced products with sustainable packaging.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand small-brand">
+            <div class="brand-mark">N</div>
+            <span>Northstar</span>
+          </div>
+          <p>Transform your space and routine with curated essentials.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+          <a href="#">Support</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <aside id="cartPanel" class="cart-panel" aria-label="Shopping cart panel" aria-hidden="true">
+      <div class="cart-header">
+        <h3>Your cart</h3>
+        <button id="closeCart" class="close-btn" aria-label="Close cart">×</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0.00</strong>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button class="button primary full-width">Checkout</button>
+      </div>
+    </aside>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
