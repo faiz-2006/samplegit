@@ -26,8 +26,6 @@ body {
   font-family: "Inter", sans-serif;
   background: linear-gradient(180deg, #f9f6f0 0%, #f2efe9 100%);
   color: var(--text);
-  padding-left: 12px;
-  transform: skewY(0.8deg);
 }
 
 a {
@@ -69,7 +67,6 @@ button {
   justify-content: space-between;
   gap: 20px;
   min-height: 82px;
-  margin-left: -30px;
 }
 
 .brand {
@@ -172,7 +169,6 @@ button {
   align-items: center;
   gap: 48px;
   padding: 64px 0 24px;
-  margin-left: 90px;
 }
 
 .eyebrow {
@@ -269,7 +265,6 @@ button {
 
 .feature-card.large {
   min-height: 500px;
-  margin-left: -20px;
 }
 
 .feature-card.large img {
@@ -377,7 +372,6 @@ button {
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 24px;
-  margin-left: -45px;
 }
 
 .section-header h2 {
@@ -403,8 +397,6 @@ button {
   border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 14px 26px rgba(20, 22, 31, 0.05);
-  margin-left: 14px;
-  width: calc(100% - 14px);
 }
 
 .product-image-wrap {
@@ -487,7 +479,6 @@ button {
   gap: 18px;
   padding: 28px 30px;
   color: white;
-  margin-left: 22px;
 }
 
 .deal-copy h2 {
@@ -508,7 +499,6 @@ button {
   border: 1px solid rgba(124, 113, 104, 0.12);
   border-radius: 20px;
   padding: 22px 18px;
-  margin-top: -18px;
 }
 
 .benefit-icon {
@@ -550,7 +540,7 @@ button {
 .cart-panel {
   position: fixed;
   top: 0;
-  right: -60px;
+  right: 0;
   width: min(420px, 100%);
   height: 100vh;
   background: rgba(255, 255, 255, 0.96);
@@ -724,15 +714,9 @@ button {
   .nav-wrap {
     flex-direction: column;
     align-items: flex-start;
-    transform: translateX(20px) rotate(3deg);
   }
 
   .hero {
-    margin-left: 24px;
-  }
-
-  .section-header {
     margin-left: 0;
-    justify-content: center;
   }
 }
